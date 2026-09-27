@@ -1,0 +1,969 @@
+/**
+ * ShopChat Modern & Professional SaaS Admin Stylesheet
+ * Inspired by modern minimal enterprise interfaces (Stripe / Tailwind UI)
+ */
+
+:root {
+	--sc-primary: #128C7E;
+	--sc-primary-hover: #075E54;
+	--sc-accent: #25D366;
+	--sc-slate-900: #0f172a;
+	--sc-slate-800: #1e293b;
+	--sc-slate-700: #334155;
+	--sc-slate-600: #475569;
+	--sc-slate-500: #64748b;
+	--sc-slate-400: #94a3b8;
+	--sc-slate-200: #e2e8f0;
+	--sc-slate-100: #f1f5f9;
+	--sc-slate-50: #f8fafc;
+	--sc-radius-sm: 6px;
+	--sc-radius: 8px;
+	--sc-radius-lg: 12px;
+}
+
+.shopchat-admin-wrap {
+	margin: 24px 24px 48px 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	color: var(--sc-slate-800);
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.shopchat-top-header {
+	background: #ffffff;
+	border: 1px solid var(--sc-slate-200);
+	border-radius: var(--sc-radius);
+	padding: 20px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.shopchat-header-brand {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.shopchat-header-icon {
+	width: 44px;
+	height: 44px;
+	border-radius: 10px;
+	background: #075E54;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.shopchat-title {
+	font-size: 18px;
+	font-weight: 700;
+	margin: 0 0 3px 0;
+	color: var(--sc-slate-900);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	line-height: 1.2;
+}
+
+.shopchat-version-tag {
+	font-size: 11px;
+	font-weight: 500;
+	background: var(--sc-slate-100);
+	color: var(--sc-slate-600);
+	padding: 2px 7px;
+	border-radius: 4px;
+	border: 1px solid var(--sc-slate-200);
+}
+
+.shopchat-subtitle {
+	margin: 0;
+	font-size: 13px;
+	color: var(--sc-slate-500);
+}
+
+/* Status Badge with pulse dot */
+.shopchat-status-badge {
+	font-size: 12px;
+	font-weight: 500;
+	padding: 6px 12px;
+	border-radius: 20px;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.shopchat-status-wame {
+	background: #f0fdf4;
+	color: #166534;
+	border: 1px solid #bbf7d0;
+}
+
+.shopchat-status-meta_cloud {
+	background: #f5f3ff;
+	color: #5b21b6;
+	border: 1px solid #ddd6fe;
+}
+
+.shopchat-dot {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: currentColor;
+	display: inline-block;
+}
+
+/* Navigation Tabs */
+.shopchat-nav-tabs {
+	display: flex;
+	gap: 4px;
+	margin-bottom: 24px;
+	border-bottom: 1px solid var(--sc-slate-200);
+	padding-bottom: 0;
+	overflow: visible;
+	flex-wrap: wrap;
+}
+
+
+.shopchat-tab-link {
+	padding: 10px 18px;
+	font-size: 13.5px;
+	font-weight: 500;
+	color: var(--sc-slate-500);
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	margin-bottom: -1px;
+	transition: all 0.15s ease;
+	display: inline-block;
+}
+
+.shopchat-tab-link:hover {
+	color: var(--sc-slate-900);
+}
+
+.shopchat-tab-link.is-active {
+	color: var(--sc-primary);
+	border-bottom-color: var(--sc-primary);
+	font-weight: 600;
+}
+
+/* Metric Cards (Clean, Professional Typography) */
+.shopchat-metrics-row {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.shopchat-metric-card {
+	background: #ffffff;
+	border: 1px solid var(--sc-slate-200);
+	border-radius: var(--sc-radius);
+	padding: 18px 20px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.shopchat-metric-label {
+	font-size: 11.5px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: var(--sc-slate-500);
+}
+
+.shopchat-metric-value {
+	font-size: 26px;
+	font-weight: 700;
+	color: var(--sc-slate-900);
+	line-height: 1.2;
+	margin: 8px 0 4px 0;
+}
+
+.shopchat-metric-text {
+	font-size: 20px;
+}
+
+.shopchat-metric-subtext {
+	font-size: 12px;
+	color: var(--sc-slate-400);
+}
+
+/* Cards */
+.shopchat-card {
+	background: #ffffff;
+	border: 1px solid var(--sc-slate-200);
+	border-radius: var(--sc-radius);
+	padding: 22px 24px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+	margin-bottom: 24px;
+}
+
+.shopchat-card-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 4px;
+}
+
+.shopchat-card-title {
+	margin: 0;
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--sc-slate-900);
+}
+
+.shopchat-badge-count {
+	font-size: 11.5px;
+	color: var(--sc-slate-500);
+	background: var(--sc-slate-100);
+	padding: 2px 8px;
+	border-radius: 12px;
+}
+
+.shopchat-card-description {
+	margin: 0 0 18px 0;
+	font-size: 13px;
+	color: var(--sc-slate-500);
+}
+
+/* Two Column Layout */
+.shopchat-two-columns {
+	display: grid;
+	grid-template-columns: 1.15fr 0.85fr;
+	gap: 20px;
+}
+
+@media (max-width: 960px) {
+	.shopchat-two-columns {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Setup Checklist */
+.shopchat-checklist {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.shopchat-check-item {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 14px;
+	background: var(--sc-slate-50);
+	border: 1px solid var(--sc-slate-200);
+	border-radius: var(--sc-radius-sm);
+}
+
+.shopchat-check-indicator {
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	font-size: 12px;
+	flex-shrink: 0;
+}
+
+.shopchat-check-item.is-pending .shopchat-check-indicator {
+	background: #ffffff;
+	border: 1px solid var(--sc-slate-300);
+	color: var(--sc-slate-600);
+}
+
+.shopchat-check-item.is-complete .shopchat-check-indicator {
+	background: #dcfce7;
+	border: 1px solid #bbf7d0;
+	color: #15803d;
+}
+
+.shopchat-check-text {
+	flex-grow: 1;
+}
+
+.shopchat-check-text strong {
+	font-size: 13.5px;
+	font-weight: 600;
+	color: var(--sc-slate-900);
+	display: block;
+}
+
+.shopchat-check-text p {
+	margin: 2px 0 0 0;
+	font-size: 12.5px;
+	color: var(--sc-slate-500);
+}
+
+/* Recommendations List */
+.shopchat-recommendation-list {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.shopchat-rec-item {
+	padding: 12px 14px;
+	border-left: 3px solid var(--sc-primary);
+	background: var(--sc-slate-50);
+	border-radius: 0 var(--sc-radius-sm) var(--sc-radius-sm) 0;
+}
+
+.shopchat-rec-item strong {
+	font-size: 13px;
+	color: var(--sc-slate-900);
+	display: block;
+	margin-bottom: 4px;
+}
+
+.shopchat-rec-item p {
+	margin: 0;
+	font-size: 12.5px;
+	color: var(--sc-slate-600);
+	line-height: 1.45;
+}
+
+/* Form Styles */
+.shopchat-form-row {
+	margin-bottom: 18px;
+}
+
+.shopchat-form-row label {
+	display: block;
+	font-weight: 600;
+	font-size: 13px;
+	margin-bottom: 6px;
+	color: var(--sc-slate-800);
+}
+
+.shopchat-form-phone-group {
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+}
+
+.shopchat-prefix-box {
+	display: flex;
+	align-items: center;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	background: #ffffff;
+	padding: 0 8px;
+}
+
+.shopchat-prefix-box span {
+	font-weight: 600;
+	color: var(--sc-slate-500);
+}
+
+.shopchat-prefix-box input {
+	border: none !important;
+	box-shadow: none !important;
+	padding-left: 4px !important;
+}
+
+/* Toggle Switch (Clean minimal) */
+.shopchat-toggle-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 0;
+}
+
+.shopchat-toggle-info strong {
+	font-size: 13.5px;
+	font-weight: 600;
+	color: var(--sc-slate-900);
+	display: block;
+}
+
+.shopchat-toggle-info p {
+	margin: 2px 0 0 0;
+	font-size: 12.5px;
+	color: var(--sc-slate-500);
+}
+
+.shopchat-switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 22px;
+	flex-shrink: 0;
+}
+
+.shopchat-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.shopchat-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #cbd5e1;
+	transition: .2s ease;
+	border-radius: 22px;
+}
+
+.shopchat-slider:before {
+	position: absolute;
+	content: "";
+	height: 16px;
+	width: 16px;
+	left: 3px;
+	bottom: 3px;
+	background-color: #ffffff;
+	transition: .2s ease;
+	border-radius: 50%;
+}
+
+.shopchat-switch input:checked + .shopchat-slider {
+	background-color: var(--sc-primary);
+}
+
+.shopchat-switch input:checked + .shopchat-slider:before {
+	transform: translateX(18px);
+}
+
+/* Mode Selection Cards */
+.shopchat-mode-selection {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 782px) {
+	.shopchat-mode-selection {
+		grid-template-columns: 1fr;
+	}
+}
+
+.shopchat-mode-option {
+	cursor: pointer;
+	position: relative;
+}
+
+.shopchat-mode-radio {
+	position: absolute;
+	top: 18px;
+	right: 18px;
+}
+
+.shopchat-mode-card {
+	background: #ffffff;
+	border: 1.5px solid var(--sc-slate-200);
+	border-radius: var(--sc-radius);
+	padding: 18px 20px;
+	transition: all 0.15s ease;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.shopchat-mode-option.is-selected .shopchat-mode-card {
+	border-color: var(--sc-primary);
+	background: #f8fafc;
+	box-shadow: 0 0 0 1px var(--sc-primary);
+}
+
+.shopchat-mode-header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 6px;
+}
+
+.shopchat-mode-header h4 {
+	margin: 0;
+	font-size: 14.5px;
+	font-weight: 600;
+	color: var(--sc-slate-900);
+}
+
+.shopchat-mode-pill {
+	font-size: 11px;
+	font-weight: 600;
+	padding: 2px 7px;
+	border-radius: 4px;
+}
+
+.free-tag { background: #dcfce7; color: #15803d; }
+.pro-tag  { background: #ede9fe; color: #6d28d9; }
+
+.shopchat-mode-card p {
+	margin: 0 0 12px 0;
+	font-size: 12.5px;
+	color: var(--sc-slate-600);
+	line-height: 1.4;
+}
+
+.shopchat-card-bullets {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	color: var(--sc-slate-600);
+}
+
+.shopchat-card-bullets li {
+	margin-bottom: 4px;
+	position: relative;
+	padding-left: 14px;
+}
+
+.shopchat-card-bullets li:before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	color: var(--sc-primary);
+	font-weight: bold;
+}
+
+.shopchat-credentials-box {
+	background: var(--sc-slate-50);
+	border: 1px solid var(--sc-slate-200);
+	border-radius: var(--sc-radius-sm);
+	padding: 16px 20px;
+	margin-top: 16px;
+}
+
+/* Template Editor: Segmented Control & Phone Preview */
+.shopchat-split-layout {
+	display: grid;
+	grid-template-columns: 1fr 340px;
+	gap: 24px;
+	align-items: start;
+}
+
+@media (max-width: 1024px) {
+	.shopchat-split-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+.shopchat-event-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-bottom: 18px;
+	background: var(--sc-slate-100);
+	padding: 4px;
+	border-radius: var(--sc-radius-sm);
+	width: fit-content;
+}
+
+.shopchat-event-pill {
+	background: transparent;
+	border: none;
+	border-radius: 4px;
+	padding: 6px 12px;
+	font-size: 12.5px;
+	font-weight: 500;
+	color: var(--sc-slate-600);
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+.shopchat-event-pill:hover {
+	color: var(--sc-slate-900);
+}
+
+.shopchat-event-pill.is-selected {
+	background: #ffffff;
+	color: var(--sc-slate-900);
+	font-weight: 600;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Tag Chips */
+.shopchat-tags-section {
+	margin-bottom: 16px;
+	background: var(--sc-slate-50);
+	padding: 12px 14px;
+	border-radius: var(--sc-radius-sm);
+	border: 1px solid var(--sc-slate-200);
+}
+
+.shopchat-tags-heading {
+	display: block;
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: var(--sc-slate-700);
+}
+
+.shopchat-tag-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.shopchat-tag-chip {
+	background: #ffffff;
+	border: 1px solid var(--sc-slate-300);
+	border-radius: 4px;
+	padding: 3px 8px;
+	font-size: 11.5px;
+	font-family: monospace;
+	color: var(--sc-primary-hover);
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.15s;
+}
+
+.shopchat-tag-chip:hover {
+	background: #f0fdf4;
+	border-color: var(--sc-primary);
+}
+
+.shopchat-template-textarea {
+	width: 100%;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-size: 13px;
+	line-height: 1.5;
+	padding: 12px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+}
+
+/* Simulator Frame */
+.shopchat-simulator-pane {
+	position: sticky;
+	top: 40px;
+}
+
+.shopchat-phone-frame {
+	width: 310px;
+	margin: 0 auto;
+	background: #1e293b;
+	border-radius: 32px;
+	padding: 10px;
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.shopchat-phone-notch {
+	width: 100px;
+	height: 14px;
+	background: #1e293b;
+	margin: 0 auto 6px auto;
+	border-radius: 0 0 10px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+}
+
+.shopchat-phone-speaker {
+	width: 36px;
+	height: 3px;
+	background: #334155;
+	border-radius: 3px;
+}
+
+.shopchat-phone-camera {
+	width: 5px;
+	height: 5px;
+	background: #334155;
+	border-radius: 50%;
+}
+
+.shopchat-phone-screen {
+	background: #efeae2;
+	border-radius: 22px;
+	overflow: hidden;
+	height: 440px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #000000;
+}
+
+.shopchat-wa-header {
+	background: #075E54;
+	color: #ffffff;
+	padding: 8px 12px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-shrink: 0;
+}
+
+.shopchat-wa-avatar {
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.shopchat-wa-title {
+	flex-grow: 1;
+	line-height: 1.2;
+}
+
+.shopchat-wa-name {
+	display: block;
+	font-size: 12.5px;
+	font-weight: 600;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 130px;
+}
+
+.shopchat-wa-sub {
+	display: block;
+	font-size: 9.5px;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.shopchat-wa-icons {
+	font-size: 16px;
+}
+
+.shopchat-wa-chat-area {
+	flex-grow: 1;
+	padding: 12px;
+	background-color: #efeae2;
+	background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0);
+	background-size: 12px 12px;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.shopchat-wa-date-pill {
+	align-self: center;
+	background: rgba(255, 255, 255, 0.9);
+	color: #54656f;
+	font-size: 9.5px;
+	font-weight: 600;
+	padding: 2px 7px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.shopchat-wa-bubble {
+	align-self: flex-end;
+	background: #d9fdd3;
+	border-radius: 6px 0 6px 6px;
+	padding: 8px 10px;
+	max-width: 88%;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.shopchat-bubble-content {
+	font-size: 12px;
+	line-height: 1.4;
+	color: #111b21;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.shopchat-bubble-meta {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 3px;
+	margin-top: 3px;
+	font-size: 9.5px;
+	color: #667781;
+}
+
+.shopchat-wa-ticks {
+	color: #53bdeb;
+	font-weight: bold;
+}
+
+.shopchat-wa-input-bar {
+	background: #f0f2f5;
+	padding: 8px 10px;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.shopchat-wa-fake-input {
+	flex-grow: 1;
+	background: #ffffff;
+	border-radius: 14px;
+	padding: 5px 10px;
+	font-size: 11.5px;
+	color: #8696a0;
+}
+
+.shopchat-simulator-hint {
+	text-align: center;
+	font-size: 11.5px;
+	color: var(--sc-slate-500);
+	margin-top: 8px;
+}
+
+/* Status Pills */
+.shopchat-status-pill {
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 500;
+	padding: 2px 8px;
+	border-radius: 4px;
+}
+
+.pill-recovered { background: #dcfce7; color: #15803d; }
+.pill-abandoned { background: #fef2f2; color: #991b1b; }
+
+/* Empty state */
+.shopchat-empty-state {
+	text-align: center;
+	padding: 40px 20px;
+}
+
+.shopchat-empty-state h4 {
+	font-size: 15px;
+	margin: 0 0 4px 0;
+	color: var(--sc-slate-900);
+}
+
+.shopchat-empty-state p {
+	margin: 0 auto;
+	max-width: 440px;
+	font-size: 13px;
+	color: var(--sc-slate-500);
+}
+
+/* Standard WP buttons overrides */
+.button-primary.shopchat-save-btn {
+	background: #128C7E !important;
+	border-color: #075E54 !important;
+	color: #ffffff !important;
+	font-weight: 600;
+}
+
+.button-primary.shopchat-save-btn:hover {
+	background: #075E54 !important;
+	border-color: #054840 !important;
+}
+
+.shopchat-table-btn {
+	background: #128C7E !important;
+	color: #ffffff !important;
+	border-color: #075E54 !important;
+	font-weight: 500;
+}
+
+/* Abandoned Carts Table & Controls */
+.shopchat-filter-pills {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+}
+
+.shopchat-filter-pills .button {
+	border-radius: 6px;
+	padding: 4px 14px;
+	font-size: 13px;
+	font-weight: 500;
+	transition: all 0.15s ease;
+}
+
+.shopchat-filter-pills .button-primary {
+	background: #128C7E !important;
+	border-color: #075E54 !important;
+	color: #ffffff !important;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.shopchat-filter-pills .button-primary:hover {
+	background: #075E54 !important;
+	border-color: #054840 !important;
+}
+
+.shopchat-table-responsive {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: visible;
+	-webkit-overflow-scrolling: touch;
+	margin-top: 16px;
+	border-radius: var(--sc-radius-md);
+	border: 1px solid var(--sc-slate-200);
+	background: #ffffff;
+}
+
+.shopchat-table {
+	width: 100% !important;
+	table-layout: auto !important;
+	border: none !important;
+	box-shadow: none !important;
+	border-collapse: collapse;
+}
+
+.shopchat-table thead th {
+	font-weight: 600 !important;
+	color: var(--sc-slate-700) !important;
+	white-space: nowrap !important;
+	padding: 12px 14px !important;
+	background: #f8fafc !important;
+	border-bottom: 1px solid var(--sc-slate-200) !important;
+	font-size: 13px;
+}
+
+.shopchat-table tbody td {
+	padding: 14px 14px !important;
+	vertical-align: middle !important;
+	font-size: 13px;
+	color: var(--sc-slate-700);
+	border-bottom: 1px solid var(--sc-slate-100);
+}
+
+.shopchat-table .col-customer {
+	min-width: 160px;
+}
+
+.shopchat-table .col-phone {
+	min-width: 130px;
+	white-space: nowrap;
+}
+
+.shopchat-table .col-items {
+	min-width: 220px;
+	line-height: 1.45;
+	word-break: normal;
+}
+
+.shopchat-table .col-total {
+	min-width: 100px;
+	white-space: nowrap;
+}
+
+.shopchat-table .col-status {
+	min-width: 100px;
+	white-space: nowrap;
+}
+
+.shopchat-table .col-activity {
+	min-width: 120px;
+	white-space: nowrap;
+}
+
+.shopchat-table .col-action {
+	min-width: 160px;
+	text-align: right;
+	white-space: nowrap;
+}
+

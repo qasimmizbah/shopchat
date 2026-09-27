@@ -1,0 +1,52 @@
+# Copyright (C) 2026 ShopChat Team
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: ShopChat 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/plugins/shopchat/\n"
+"POT-Creation-Date: 2026-09-20T12:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: ShopChat Build Tool\n"
+
+msgid "ShopChat for WhatsApp & WooCommerce"
+msgstr ""
+
+msgid "Boost sales with WhatsApp Order Notifications, Abandoned Cart Recovery, Storefront Customer Chat, and Review Boosters for WooCommerce."
+msgstr ""
+
+msgid "Chat with us"
+msgstr ""
+
+msgid "Support Team"
+msgstr ""
+
+msgid "Online now"
+msgstr ""
+
+msgid "Hello! How can we help you today?"
+msgstr ""
+
+msgid "Send Status Update"
+msgstr ""
+
+msgid "Request Review"
+msgstr ""
+
+msgid "Abandoned Carts"
+msgstr ""
+
+msgid "Phone Number (for WhatsApp Updates)"
+msgstr ""
+
+msgid "Please enter your phone number to receive WhatsApp order updates."
+msgstr ""
+
+msgid "e.g. 9876543210"
+msgstr ""
